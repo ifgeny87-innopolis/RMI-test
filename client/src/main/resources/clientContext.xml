@@ -3,12 +3,33 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="clientCalculator" class="rmi_clients.ClientCalculator">
-        <property name="calculator" ref="remoteCalculator"/>
+    <!-- Add Calculator RMI Client -->
+    <bean id="addCalc" class="rmi_clients.ClientCalculator">
+        <property name="calculator" ref="addCalcRmi"/>
     </bean>
 
-    <bean id="remoteCalculator" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
-        <property name="serviceUrl" value="rmi://localhost:11199/CalculatorService"/>
+    <bean id="addCalcRmi" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost:11199/AddCalcService"/>
         <property name="serviceInterface" value="services.ICalculator"/>
+    </bean>
+
+    <!-- Multi Calculator RMI Client -->
+    <bean id="multiCalc" class="rmi_clients.ClientCalculator">
+        <property name="calculator" ref="multiCalcRmi"/>
+    </bean>
+
+    <bean id="multiCalcRmi" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost:11199/MultiCalcService"/>
+        <property name="serviceInterface" value="services.ICalculator"/>
+    </bean>
+
+    <!-- Printer RMI Client -->
+    <bean id="printer" class="rmi_clients.ClientPrinter">
+        <property name="printer" ref="printerRmi"/>
+    </bean>
+
+    <bean id="printerRmi" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost:11199/Printer"/>
+        <property name="serviceInterface" value="services.IPrinter"/>
     </bean>
 </beans>

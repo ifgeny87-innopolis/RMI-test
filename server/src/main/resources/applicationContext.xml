@@ -3,18 +3,41 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="multiply" class="actions.ActionMultiply"/>
-
+    <!-- Бины слагаемого -->
     <bean id="add" class="actions.ActionAdd"/>
 
-    <bean id="calculator" class="services.Calculator">
+    <bean id="addCalc" class="services.Calculator">
         <property name="action" ref="add"/>
     </bean>
 
-    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
-        <property name="serviceName" value="CalculatorService"/>
-        <property name="service" ref="calculator"/>
+    <bean id="addCalcRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="AddCalcService"/>
+        <property name="service" ref="addCalc"/>
         <property name="serviceInterface" value="services.ICalculator"/>
+        <property name="registryPort" value="11199"/>
+    </bean>
+
+    <!-- Бины множителя -->
+    <bean id="multiply" class="actions.ActionMultiply"/>
+
+    <bean id="multiCalc" class="services.Calculator">
+        <property name="action" ref="multiply"/>
+    </bean>
+
+    <bean id="multiCalcRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="MultiCalcService"/>
+        <property name="service" ref="multiCalc"/>
+        <property name="serviceInterface" value="services.ICalculator"/>
+        <property name="registryPort" value="11199"/>
+    </bean>
+
+    <!-- Бины принтера -->
+    <bean id="printer" class="services.Printer"/>
+
+    <bean id="printerRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="Printer"/>
+        <property name="service" ref="printer"/>
+        <property name="serviceInterface" value="services.IPrinter"/>
         <property name="registryPort" value="11199"/>
     </bean>
 </beans>
