@@ -1,2 +1,7 @@
-gradle/wrapper
+gradle/*
+
 .gradle
+
+build/*
+
+*.class
