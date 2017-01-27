@@ -24,12 +24,12 @@
     </bean>
 
     <!-- Printer RMI Client -->
-    <bean id="printer" class="rmi_clients.ClientPrinter">
-        <property name="printer" ref="printerRmi"/>
+    <bean id="accountMan" class="rmi_clients.ClientAccountManager">
+        <property name="accountManager" ref="accountManRmi"/>
     </bean>
 
-    <bean id="printerRmi" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
-        <property name="serviceUrl" value="rmi://localhost:11199/Printer"/>
-        <property name="serviceInterface" value="services.IPrinter"/>
+    <bean id="accountManRmi" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost:11199/AccountManager"/>
+        <property name="serviceInterface" value="services.IAccountManager"/>
     </bean>
 </beans>

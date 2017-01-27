@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Бины менеджера аккаунтов -->
+    <bean id="accountMan" class="services.AccountManager"/>
+
+    <bean id="printerRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="AccountManager"/>
+        <property name="service" ref="accountMan"/>
+        <property name="serviceInterface" value="services.IAccountManager"/>
+        <property name="registryPort" value="11199"/>
+    </bean>
+</beans>

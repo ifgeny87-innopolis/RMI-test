@@ -30,14 +30,4 @@
         <property name="serviceInterface" value="services.ICalculator"/>
         <property name="registryPort" value="11199"/>
     </bean>
-
-    <!-- Бины принтера -->
-    <bean id="printer" class="services.Printer"/>
-
-    <bean id="printerRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
-        <property name="serviceName" value="Printer"/>
-        <property name="service" ref="printer"/>
-        <property name="serviceInterface" value="services.IPrinter"/>
-        <property name="registryPort" value="11199"/>
-    </bean>
 </beans>

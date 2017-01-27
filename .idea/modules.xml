@@ -6,10 +6,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client_main.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client_test.iml" group="client" />
-      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common.iml" filepath="$PROJECT_DIR$/.idea/modules/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/common_main.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/common_test.iml" group="common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/server_main.iml" group="server" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/server_test.iml" group="server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userman.iml" filepath="$PROJECT_DIR$/.idea/modules/userman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userman_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userman_main.iml" group="userman" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userman_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userman_test.iml" group="userman" />
     </modules>
   </component>
 </project>

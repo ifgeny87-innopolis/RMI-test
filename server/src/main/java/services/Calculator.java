@@ -1,18 +1,18 @@
 package services;
 
-import actions.Action;
+import actions.IAction;
 
 /**
  * Created in project Test_RMI on 26.01.17
  */
 public class Calculator implements ICalculator
 {
-	private Action action;
+	private IAction action;
 
 	@Override
-	public void setAction(Action action)
+	public void setAction(IAction act)
 	{
-		this.action = action;
+		this.action = act;
 	}
 
 	@Override

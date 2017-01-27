@@ -1,11 +1,9 @@
 package actions;
 
-import actions.Action;
-
 /**
  * Created in project Test_RMI on 26.01.17
  */
-public class ActionMultiply implements Action
+public class ActionMultiply implements IAction
 {
 	@Override
 	public long performAction(long op1, long op2)
